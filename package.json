@@ -1,0 +1,46 @@
+{
+  "name": "keywarrior-engine",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/keywarrior.umd.js",
+  "module": "./dist/keywarrior.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/keywarrior.es.js",
+      "require": "./dist/keywarrior.umd.js"
+    }
+  },
+  "dependencies": {
+    "random-words": "^1.1.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "rxjs": "^7.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.10",
+    "@types/random-words": "^1.1.2",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "@vitejs/plugin-react-refresh": "^1.3.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "node-sass": "^6.0.1",
+    "prettier": "^2.3.2",
+    "sass": "^1.39.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.5.2"
+  }
+}
