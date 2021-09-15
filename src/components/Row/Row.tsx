@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getRandomWord } from '../../utils/words';
 import { interval } from 'rxjs';
-import { RowWord } from './RowWordProps';
+import { Word } from '../Word';
 
 const INTERVAL = 2000;
 
@@ -24,19 +24,10 @@ export const Row = ({ userEnteredWord }: RowProps) => {
     };
   }, []);
 
-  const removeWord = (word: string) => {
-    setWords((prevValue) => [...prevValue.filter((w) => w !== word)]);
-  };
-
   return (
     <>
       {generatedWords?.map((word, index) => (
-        <RowWord
-          word={word}
-          key={index}
-          userEnteredWord={userEnteredWord}
-          removeWord={removeWord}
-        />
+        <Word word={word} key={index} userEnteredWord={userEnteredWord} />
       ))}
     </>
   );
